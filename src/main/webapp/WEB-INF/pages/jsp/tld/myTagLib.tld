@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <description>My tag library.</description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>mytag</short-name>
+    <uri>http://www.andychan.org/mytaglib</uri>
+    
+    <tag>
+        <description>Say hello to the visitor.</description>
+        <name>helloWorld</name>
+        <tag-class>andy.mango.tag.HelloWorldTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>
