@@ -2,17 +2,18 @@
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
-
+<!-- 指定 Struts 2 配置文件的根元素 -->
 <struts>
-
+	<!-- 指定全局国际化资源文件 -->
 	<constant name="struts.custom.i18n.resources" value="message/messages_zh_CN" />
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
-    <constant name="struts.devMode" value="true" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
 
-    <package name="default" namespace="/" extends="struts-default">
-        <action name="*">
-            <result>/WEB-INF/pages/jsp/{1}.jsp</result>
-        </action>
-    </package>
-
+	<!-- 所以的 Action 定义都应该放在 package 下 -->
+	<package name="mango" namespace="/" extends="struts-default">
+		<action name="login" class="andy.mango.struts.LoginAction">
+			<result name="error">/WEB-INF/pages/jsp/error.jsp</result>
+			<result name="success">/WEB-INF/pages/jsp/welcome.jsp</result>
+		</action>
+	</package>
 </struts>

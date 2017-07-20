@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=GBK"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://www.andychan.org/mytaglib" prefix="mytag"%>
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml1-transitional.dtd">
@@ -13,7 +13,7 @@
 	<s:form action="login">
 		<s:textfield name="userId" key="user"/>
 		<s:textfield name="password" key="pass"/>
-		<s:submit key="login"/>
+		<s:submit value="%{getText('login')}"/>
 	</s:form>
 </body>
 </html>
